@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './pages/app/App';
+import CeraRoundProBold from './assets/fonts/CeraRoundProBold.ttf';
+import "./index.css"
+
+const loadFont = () => {
+  const ceraFont = new FontFace('CeraRoundProBold', `url(${CeraRoundProBold}) format('truetype')`);
+
+  ceraFont.load().then((loadedFont) => {
+    document.fonts.add(loadedFont);
+    document.body.style.fontFamily = 'CeraRoundProBold, sans-serif';
+  }).catch((error) => {
+    console.error("Ошибка загрузки шрифта:", error);
+  });
+};
+
+loadFont();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,8 +23,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
