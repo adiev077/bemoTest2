@@ -1,5 +1,6 @@
 import React from 'react';
 import {OtherLogo} from "../../assets/icons";
+import eyes from "./../../assets/image/eyes.svg"
 
 function LastBlock(props) {
   return (
@@ -24,10 +25,17 @@ function LastBlock(props) {
         border: "1px solid #6257a1",
         borderRadius: 20,
         display: "flex",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
         alignItems: "center",
+        padding: "0 10px"
       }}>
-        <OtherLogo/>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+          <OtherLogo/>
+        </div>
         <div style={{
           backgroundColor: "#6257a1",
           backgroundPosition: "center center",
@@ -40,6 +48,11 @@ function LastBlock(props) {
         <p style={{
           fontSize: 18,
           color: "#2f293e",
+          width: 185,
+          height: 25,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
         }}>
           Audit Completed
         </p>
@@ -55,8 +68,16 @@ function LastBlock(props) {
         <p style={{
           fontSize: 18,
           color: "#2f293e",
-          fontFamily: "CeraRoundPro, sans-serif"
+          fontFamily: "CeraRoundPro, sans-serif",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: 10
         }}>
+          <img src={eyes} alt="" style={{
+            width: 25,
+            height: 15,
+          }}/>
           View
           report
         </p>

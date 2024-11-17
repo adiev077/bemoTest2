@@ -1,5 +1,7 @@
 import React from 'react';
 import imgWallet from "./../../assets/image/tild3763-6664-4962-b037-386537623065__wallet.png"
+import {Wallet} from "../../assets/icons";
+import arrow from "./../../assets/image/arrow.png"
 
 function SecondBlockComponents(props) {
   return (
@@ -56,9 +58,19 @@ function SecondBlockComponents(props) {
           width: 378,
           height: 252,
           textAlign: "left",
+          display: "flex",
+          flexDirection: "column",
         }}>
           Stake, Earn, and Enjoy the
           Rewards.
+          <Wallet/>
+          <img src={arrow} alt="" style={{
+            width: 25,
+            height: 25,
+            position: "relative",
+            top: "-16px",
+            left: "-12px",
+          }}/>
         </p>
         <p style={{
           color: "#2f293e",
